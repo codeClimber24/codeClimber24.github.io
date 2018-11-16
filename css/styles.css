@@ -494,9 +494,10 @@ h2 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   height: 100%;
+  width: 100%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -514,9 +515,17 @@ h2 {
   text-transform: uppercase;
 }
 .hvr-txt p {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
+@media (min-width: 700px) {
+  .hvr-txt {
+    font-size: 3rem;
+  }
+  .hvr-txt p {
+    font-size: 2.5rem;
+  }
+}
 @media (min-width: 1000px) {
   .portfolio-cards {
     -webkit-box-orient: horizontal;

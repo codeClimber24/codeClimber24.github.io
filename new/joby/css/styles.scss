@@ -277,6 +277,10 @@ main {
     justify-content: center;
     opacity: 1 !important;
     width: 100%;
+
+    .logo {
+      width: auto;
+    }
   }
 
   .page-menu {

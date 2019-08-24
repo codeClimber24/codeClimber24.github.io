@@ -1,0 +1,11 @@
+.no-lead {
+  font-style: italic;
+}
+
+.tab-control {
+  cursor: pointer;
+}
+
+.tab-item {
+  margin: 0 50px 20px;
+}

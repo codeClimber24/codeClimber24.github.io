@@ -210,7 +210,7 @@ main {
   z-index: 3;
 
   a {
-    color: $cream;
+    color: $white;
     margin: 10px;
   }
 
@@ -324,7 +324,7 @@ main {
   a {
     background-color: $blue;
     border-radius: 3px;
-    color: $cream;
+    color: $white;
     margin: 5px;
     padding: 10px;
     text-decoration: none;
@@ -341,7 +341,7 @@ main {
   .home-buttons {
     align-items: center;
     background-color: $blue;
-    color: $cream;
+    color: $white;
     display: flex;
     filter: drop-shadow(2px 2px 5px $dark-grey);
     max-width: 220px;

@@ -168,7 +168,7 @@ main {
 }
 
 .page-menu {
-  // align-items: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   font-size: 1.8rem;
@@ -176,7 +176,7 @@ main {
 
   .links-left,
   .links-right {
-    // align-items: center;
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -275,7 +275,6 @@ main {
 
 @media (min-width:900px) {
   .closed {
-    align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

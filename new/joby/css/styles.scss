@@ -301,7 +301,9 @@ main {
 
     .links-left,
     .links-right {
+      align-items: flex-start;
       flex-direction: row;
+      margin-top: 5px;
     }
   }
 

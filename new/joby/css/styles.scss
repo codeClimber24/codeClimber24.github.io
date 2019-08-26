@@ -100,7 +100,6 @@ footer {
 }
 
 header {
-  height: 160px;
   position: absolute;
   top: -90px;
   width: 100%;
@@ -279,6 +278,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    max-height: 160px;
     opacity: 1 !important;
     width: 100%;
 

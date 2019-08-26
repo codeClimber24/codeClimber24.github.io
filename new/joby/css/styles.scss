@@ -289,7 +289,7 @@ main {
 
   .page-menu {
     flex-direction: row;
-    padding: 10px 20px;
+    padding: 0 20px;
 
     .links-left {
       margin-right: auto;
@@ -303,7 +303,7 @@ main {
     .links-right {
       align-items: flex-start;
       flex-direction: row;
-      margin-top: 5px;
+      margin-top: 15px;
     }
   }
 

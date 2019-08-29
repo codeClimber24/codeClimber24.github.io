@@ -286,6 +286,7 @@ main {
       width: 30%;
 
       img {
+        border-radius: 5px;
         width: 100%;
       }
     }
@@ -323,7 +324,7 @@ main {
 }
 
 .course_search_container {
-  margin: 30px;
+  margin: 50px;
 }
 
 .course-links {
@@ -346,7 +347,7 @@ main {
 .links {
   display: flex;
   justify-content: space-around;
-  padding-top: 15px;
+  padding-top: 45px;
 
   .home-buttons {
     align-items: center;

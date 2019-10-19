@@ -347,8 +347,10 @@ main {
 
 .course-links {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  list-style: none;
 
   a {
     background-color: $blue;
@@ -374,6 +376,7 @@ main {
     color: $white;
     display: flex;
     filter: drop-shadow(2px 2px 5px $dark-grey);
+    line-height: 1.5;
     max-width: 220px;
     padding: 10px;
     text-decoration: none;

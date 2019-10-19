@@ -350,7 +350,10 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  list-style: none;
+
+  li {
+    list-style: none;
+  }
 
   a {
     background-color: $blue;

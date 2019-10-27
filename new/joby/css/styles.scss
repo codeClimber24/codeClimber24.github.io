@@ -178,6 +178,10 @@ section {
 ul {
   list-style-position: inside;
   padding-left: 0;
+
+  li {
+    padding-left: 5px;
+  }
 }
 
 @media (min-width:900px) {

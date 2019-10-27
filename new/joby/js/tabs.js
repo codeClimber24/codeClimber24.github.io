@@ -17,7 +17,14 @@ function toggleItem () {
     tabItem[i].className = 'tab-item';
     tabHead[i].setAttribute('aria-selected', 'false')
   }
-  // activate the relavent tabpanel
-  item.className = 'tab-item active';
-  this.setAttribute('aria-selected', 'true');
+  // if tab is not selected
+  if (this.getAttribute('aria-selected') === 'false') {
+    // activate the relavent tabpanel
+    item.className = 'tab-item active';
+    this.setAttribute('aria-selected', 'true');
+  } else {
+    // deactivate the relavent tabpanel
+    item.className = 'tab-item';
+    this.setAttribute('aria-selected', 'false');
+  }
 }

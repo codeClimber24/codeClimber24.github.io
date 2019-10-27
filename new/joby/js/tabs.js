@@ -10,6 +10,7 @@ function toggleItem () {
   var itemId = this.getAttribute('aria-controls');
   // get item clicked on usiing id
   var item = document.getElementById(itemId);
+  console.log(item);
 
   // for each tab, collapse it
   for (var i = 0; i < tabItem.length; i++) {

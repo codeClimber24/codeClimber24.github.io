@@ -119,12 +119,12 @@
         </div>
         <h2>To find out more about a specific course, choose one of the options below:</h2>
         <div class="course-links" role="tablist">
-          <a href="#cwi" role="tab" class="tab-head" aria-expanded="false">Climbing Wall Instructor (CWI)</a>
-          <a href="#cwdi" role="tab" class="tab-head" aria-expanded="false">Climbing Wall Development Instructor (CWDI)</a>
-          <a href="#rci" role="tab" class="tab-head" aria-expanded="false">Rock Climbing Instructor (RCI)</a>
-          <a href="#fca" role="tab" class="tab-head" aria-expanded="false">Foundation Coach Award (FCA)</a>
+          <p id="cwi-head" role="tab" class="tab-head" aria-selected="false" aria-controls="cwi">Climbing Wall Instructor (CWI)</p>
+          <p id="cwdi-head" role="tab" class="tab-head" aria-selected="false" aria-controls="cwdi">Climbing Wall Development Instructor (CWDI)</p>
+          <p id="rci-head" role="tab" class="tab-head" aria-selected="false" aria-controls="rci">Rock Climbing Instructor (RCI)</p>
+          <p id="fca-head" role="tab" class="tab-head" aria-selected="false" aria-controls="fca">Foundation Coach Award (FCA)</p>
         </div>
-        <article id="cwi" class="tab-item" role="tabpanel">
+        <article id="cwi" class="tab-item" role="tabpanel" aria-labelledby="cwi-head">
           <h2>
             Climbing Wall Instructor (CWI)
           </h2>
@@ -238,7 +238,7 @@
             </ul>
           </p>
         </article>
-        <article id="cwdi" class="tab-item" role="tabpanel">
+        <article id="cwdi" class="tab-item" role="tabpanel" aria-labelledby="cwdi-head">
           <h2>
             Climbing Wall Development Instructor (CWDI)
           </h2>
@@ -337,7 +337,7 @@
             The Climbing Wall Development Instructor assessment is a minimum of 6 hours.
           </p>
         </article>
-        <article id="rci" class="tab-item" role="tabpanel">
+        <article id="rci" class="tab-item" role="tabpanel" aria-labelledby="rci-head">
           <h2>
             Rock Climbing Instructor
           </h2>
@@ -448,7 +448,7 @@
             The Rock Climbing Instructor assessment is 2 days long.
           </p>
         </article>
-        <article id="fca" class="tab-item" role="tabpanel">
+        <article id="fca" class="tab-item" role="tabpanel" aria-labelledby="fca-head">
           <h2>
             Foundation Coach Award
           </h2>

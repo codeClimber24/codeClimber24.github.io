@@ -6,16 +6,18 @@ for (var i = 0; i < tabHead.length; i++) {
 }
 
 function toggleItem () {
-  var itemClass = this.parentNode.className;
-  var toggle = this.getAttribute('aria-expanded');
+  // find id of item clicked on
+  var itemId = this.getAttribute('aria-controls');
+  console.log(itemId);
+  // get item clicked on usiing id
+  var item = document.getElementById(itemId);
+
+  // for each tab, collapse it
   for (var i = 0; i < tabItem.length; i++) {
     tabItem[i].className = 'tab-item';
-    tabHead[i].setAttribute('aria-expanded', 'false')
+    tabHead[i].setAttribute('aria-selected', 'false')
   }
-  if (itemClass === 'tab-item') {
-    this.parentNode.className = 'tab-item active'
-  }
-  if (toggle === 'false') {
-    this.setAttribute('aria-expanded', 'true')
-  }
+  // activate the relavent tabpanel
+  item.className = 'tab-item active';
+  this.setAttribute('aria-selected', 'true');
 }

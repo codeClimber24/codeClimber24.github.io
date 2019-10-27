@@ -10,20 +10,19 @@ function toggleItem () {
   var itemId = this.getAttribute('aria-controls');
   // get item clicked on usiing id
   var item = document.getElementById(itemId);
-  console.log(item);
 
-  // for each tab, collapse it
-  for (var i = 0; i < tabItem.length; i++) {
-    tabItem[i].className = 'tab-item';
-    tabHead[i].setAttribute('aria-selected', 'false')
-  }
   // if tab is not selected
   if (this.getAttribute('aria-selected') === 'false') {
-    // activate the relavent tabpanel
+    // collapse all tabs
+    for (var i = 0; i < tabItem.length; i++) {
+      tabItem[i].className = 'tab-item';
+      tabHead[i].setAttribute('aria-selected', 'false')
+    }
+    // expand the relavent tabpanel
     item.className = 'tab-item active';
     this.setAttribute('aria-selected', 'true');
   } else {
-    // deactivate the relavent tabpanel
+    // collapse the relavent tabpanel
     item.className = 'tab-item';
     this.setAttribute('aria-selected', 'false');
   }

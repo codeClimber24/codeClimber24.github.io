@@ -366,6 +366,10 @@ ul {
   margin: 50px;
 }
 
+.course-list {
+  width: 100%;
+}
+
 .course-links {
   display: flex;
   flex-direction: row;
@@ -374,6 +378,7 @@ ul {
 
   li {
     list-style: none;
+    padding-top: 0;
   }
 
   a {

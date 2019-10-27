@@ -386,6 +386,14 @@ ul {
   }
 }
 
+.tab-item {
+  display: none;
+
+  .active {
+    display: block;
+  }
+}
+
 // ---- HOME ----
 
 #home {

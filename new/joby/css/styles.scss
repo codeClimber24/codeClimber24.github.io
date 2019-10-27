@@ -175,6 +175,11 @@ section {
   width: 75%;
 }
 
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 @media (min-width:900px) {
   header {
     img {

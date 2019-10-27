@@ -47,14 +47,11 @@ $white: #fff;
 body {
   background-color: $cream;
   color: $dark-grey;
-  display: flex;
   font-family: 'Biryani', sans-serif;
   font-size: 1.8rem;
-  justify-content: center;
   margin: 0;
   position: relative;
   text-align: center;
-  width: 75%;
 }
 
 h1,
@@ -169,6 +166,10 @@ main {
   position: absolute;
   top: -10px;
   width: 1px;
+}
+
+section {
+  width: 75%;
 }
 
 @media (min-width:900px) {

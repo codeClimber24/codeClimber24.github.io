@@ -45,8 +45,10 @@ $white: #fff;
 }
 
 body {
+  align-items: center;
   background-color: $cream;
   color: $dark-grey;
+  display: flex;
   font-family: 'Biryani', sans-serif;
   font-size: 1.8rem;
   margin: 0;

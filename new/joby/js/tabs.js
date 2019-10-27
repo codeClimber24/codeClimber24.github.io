@@ -8,7 +8,6 @@ for (var i = 0; i < tabHead.length; i++) {
 function toggleItem () {
   // find id of item clicked on
   var itemId = this.getAttribute('aria-controls');
-  console.log(itemId);
   // get item clicked on usiing id
   var item = document.getElementById(itemId);
 

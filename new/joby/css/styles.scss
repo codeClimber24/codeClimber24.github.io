@@ -389,7 +389,7 @@ ul {
 .tab-item {
   display: none;
 
-  .active {
+  &.active {
     display: block;
   }
 }

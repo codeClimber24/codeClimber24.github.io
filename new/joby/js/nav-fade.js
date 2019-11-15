@@ -1,9 +1,11 @@
 var myElement = $('.header');
 
 $(window).on('scroll', function () {
-  var st = $(this).scrollTop();
+  var st = 1 - $(this).scrollTop() / 100;
+  var opacity = st + '!important';
+  var height = st + 'px';
   myElement.css({
-    'opacity': '1 - st / 100 !important',
-    'height': '1 - st / 100 px'
+    'opacity': opacity,
+    'height': height
   });
 });

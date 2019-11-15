@@ -14,7 +14,6 @@ $white: #fff;
   align-items: center;
   display: flex;
   flex-direction: row;
-  flex: 1;
   justify-content: center;
   margin-top: 7vw;
 }
@@ -25,6 +24,10 @@ $white: #fff;
   flex-direction: column;
   flex: 3;
   justify-content: center;
+}
+
+.about-image {
+  flex: 1;
 }
 
 // ---- GLOBAL ----

@@ -51,6 +51,7 @@
   // When a tab is clicked, activateTab is fired to activate it
   function clickEventListener (event) {
     var tab = event.target;
+    console.log("hi");
     activateTab(tab, false);
   };
 

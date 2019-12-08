@@ -12,6 +12,7 @@
 
   function generateArrays () {
     tabs = document.querySelectorAll('[role="tab"]');
+    console.log(tabs);
     panels = document.querySelectorAll('[role="tabpanel"]');
   };
 

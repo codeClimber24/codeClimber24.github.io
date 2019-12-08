@@ -12,7 +12,6 @@
 
   function generateArrays () {
     tabs = document.querySelectorAll('[role="tab"]');
-    console.log(tabs);
     panels = document.querySelectorAll('[role="tabpanel"]');
   };
 
@@ -147,6 +146,7 @@
 
   // Activates any given tab panel
   function activateTab (tab, setFocus) {
+    console.log("hi");
     setFocus = setFocus || true;
     // Deactivate all other tabs
     deactivateTabs();

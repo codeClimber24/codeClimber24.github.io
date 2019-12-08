@@ -416,6 +416,13 @@ ul {
   }
 }
 
+.hasimage {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
 // ---- HOME ----
 
 #home {

@@ -51,7 +51,6 @@
   // When a tab is clicked, activateTab is fired to activate it
   function clickEventListener (event) {
     var tab = event.target;
-    console.log("hi");
     activateTab(tab, false);
   };
 
@@ -147,7 +146,6 @@
 
   // Activates any given tab panel
   function activateTab (tab, setFocus) {
-    console.log("hi");
     setFocus = setFocus || true;
     // Deactivate all other tabs
     deactivateTabs();

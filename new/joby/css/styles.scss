@@ -421,6 +421,10 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
+  img {
+    width: 50%;
+  }
 }
 
 // ---- HOME ----

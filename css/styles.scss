@@ -8,12 +8,9 @@ $blue-white: #e6f2ff;
 $off-white: #f9ffff;
 $white: #fff;
 $menu-background:rgba(203, 227, 255, .9);
-$wmpc-background: rgba(254, 207, 1, .7);
-$wmpc-portfolio-background: rgba(254, 207, 1, 1);
-$amethyst-background: rgba(137, 0, 196, .7);
-$amethyst-portfolio-background: rgba(137, 0, 196, 1);
-$arts2life-background: rgba(252, 96, 0, .7);
-$arts2life-portfolio-background: rgba(252, 96, 0, 1);
+$wmpc-background: rgba(254, 207, 1, 1);
+$amethyst-background: rgba(137, 0, 196, 1);
+$paul-background: rgba(252, 96, 0, 1);
 $head-height: 110px;
 $foot-height: 70px;
 $collapse: 1000px;
@@ -612,17 +609,17 @@ h1 { // font size
     }
 
     .wmpc { // background, border-radius
-      background: $wmpc-portfolio-background;
+      background: $wmpc-background;
       border-radius: 50%;
     }
 
     .amethyst { // background, border-radius
-      background: $amethyst-portfolio-background;
+      background: $amethyst-background;
       border-radius: 10px;
     }
 
-    .arts2life { // background, border-radius
-      background: $arts2life-portfolio-background;
+    .paul { // background, border-radius
+      background: $paul-background;
       border-radius: 10px;
     }
   }

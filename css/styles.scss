@@ -276,6 +276,8 @@ header { // flexbox, font size, height, position, z-index (s)
     @include flex-align-center;
     @include flex-display;
     @include flex-dir-row;
+    width: 50%;
+    opacity: 100% !important;
   }
 }
 

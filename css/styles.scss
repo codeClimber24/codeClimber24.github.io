@@ -313,13 +313,13 @@ h1 { // font size
 
 @media (min-width:740px) { // font size
   h1 {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
 }
 
 @media (min-width:1000px) { // font size
   h1 {
-    font-size: 7rem;
+    font-size: 5.5rem;
   }
 }
 
@@ -773,12 +773,16 @@ footer { // flexbox and background colour (s)
 @media (min-width: $collapse-foot) { // layout for larger screens
   footer { // change to row
     @include flex-dir-row;
-    height: 70px;
+    height: auto;
+    max-height: 100px;
     padding: 0;
+
+    .footer-logo {
+      width: 35%;
+    }
 
     img { // increase left margin
       margin-left: 30px;
-      width: 35%;
     }
 
     .contact { // change to row & alter margins to auto, 30px

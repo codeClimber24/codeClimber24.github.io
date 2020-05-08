@@ -776,10 +776,14 @@ footer { // flexbox and background colour (s)
     height: 70px;
     padding: 0;
 
-    img { // increase left margin
-      margin-left: 30px;
-    }
+    a {
+      width: 35%;
 
+      img { // increase left margin
+        margin-left: 30px;
+      }
+    }
+    
     .contact { // change to row & alter margins to auto, 30px
       @include flex-dir-row;
       margin-left: auto;

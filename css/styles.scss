@@ -10,7 +10,7 @@ $white: #fff;
 $menu-background:rgba(203, 227, 255, .9);
 $wmpc-background: rgba(254, 207, 1, 1);
 $amethyst-background: rgba(137, 0, 196, 1);
-$paul-background: rgba(252, 96, 0, 1);
+$paul-background: rgba(148, 22, 81, 1);
 $head-height: 110px;
 $foot-height: 70px;
 $collapse: 1000px;
@@ -498,6 +498,10 @@ h1 { // font size
     .amethyst { // background
       background: $amethyst-background;
     }
+
+    .paul { // background
+      background: $paul-background;
+    }
   }
 
   .site-img:hover { // fade in text on hover
@@ -515,7 +519,7 @@ h1 { // font size
   @include flex-dir-column;
   @include flex-justify-center;
   border-radius: 5px;
-  color: $white;
+  color: $black;
   cursor: pointer;
   font-size: 2rem;
   font-weight: bold;

@@ -650,6 +650,8 @@ h1 { // font size
   }
 
   .site-img:hover { // spin and fade in text on hover
+    color: $white;
+
     img { // opacity, transform
       opacity: 0;
       -webkit-transform: rotateY(180deg);

@@ -471,6 +471,14 @@ h1 { // font size
   @include flex-dir-column;
   @include flex-justify-space-around;
   padding: 20px;
+
+  &.one {
+    padding-bottom: 10px
+  }
+
+  &.two {
+    padding-top: 10px
+  }
 }
 
 .portfolio-img { // flex order, margin, position (s)

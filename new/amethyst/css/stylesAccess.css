@@ -1,0 +1,555 @@
+/*font-family: 'Aref Ruqaa', serif;
+font-family: 'Sacramento', cursive;
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	margin: 0.625em;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	color: #710095;
+}
+
+/* Center everything */
+
+header, section, footer, aside, nav, article, figure, figcaption {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+h3 {
+	font-size: 3rem;
+	margin: 20px 0;
+}
+
+@media (max-width:600px) {
+	h3 {
+		font-size: 2rem;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: #F44E91;
+}
+
+/* Navbar styling */
+
+#navbar {
+	background-color: white;
+	-webkit-box-shadow: 0px 5px 5px #777777;
+	-moz-box-shadow: 0px 5px 5px #777777;
+	box-shadow: 0px 5px 5px #777777;
+	line-height: 60px;
+	margin: 10px 0;
+}
+
+/* Remove padding to center */
+
+ul {
+	padding: 0;
+}
+
+/* Navbar link styling */
+
+.nav-link li {
+	list-style-type: none;
+	display: inline;
+	font-size: 2.75rem;
+	text-align: center;
+	color: #710095;
+	padding: 10px 20px;
+}
+
+.nav-link:hover {
+	font-weight: bold;
+}
+
+
+/* Responsive navbar */
+
+@media (max-width:890px) {
+	.nav-link li {
+		display: block;
+		font-size: 2.5rem;
+		padding: 5px 0;
+	}
+	
+	#navbar {
+		line-height: 28px;
+	}
+}
+
+@media (max-width:600px) {
+	.nav-link li {
+		display: block;
+		font-size: 1.5rem;
+		padding: 5px 0;
+	}
+	
+	#navbar {
+		line-height: 18px;
+	}
+}
+
+@media (max-width:450px) {
+	.nav-link li {
+		display: block;
+		font-size: 1.5rem;
+		padding: 5px 0;
+	}
+	
+	#navbar {
+		line-height: 15px;
+	}
+}
+
+/* Style price tabs and links */
+
+.tab-list > li {
+	list-style-type: none;
+	display: inline;
+	font-size: 2.75rem;
+	cursor: pointer;
+	padding: 10px 20px;
+	font-family: 'Aref Ruqaa', serif;
+}
+
+/* vertical links on small screens */
+
+@media (max-width:992px) {
+	.tab-list > li {
+		display: block;
+		padding: 0;
+	}
+}
+
+li.active {
+	font-weight: bold;
+}
+
+.tab-control {
+	color: #710095;
+}
+
+.tab-control:hover {
+	font-weight: bold;
+}
+
+/* Hide tabs when not active */
+
+.tab-panel {
+	display: none;
+}
+
+/* Show tabs when active */
+
+.tab-panel.active {
+	display: block;
+	border: 5px double rgba(136, 0, 194, 0.4);
+	position: relative;
+	overflow: hidden;
+	margin: 10px 20px;
+}
+
+/* Spacing between table rows */
+
+td {
+	padding: 5px 0;
+}
+
+/* Size for Milage statement */
+
+#milage {
+	font-size: 2.5rem;
+	padding-bottom: 20px;
+}
+
+/* Mani/Pedi descriptions */
+
+.desc {
+	font-size: 1.75rem;
+}
+
+/* Parties text */
+
+#party {
+	z-index: 2;
+	position: relative;
+	font-size: 2.5rem;
+}
+
+/* Style the price tables */
+
+.tab-panel.active table {
+	padding: 50px 30px;
+	z-index: 2;
+	position: relative;
+	font-size: 2.5rem;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+}
+
+
+/* width of columns in price tables */
+
+@media (min-width:950px) {
+	.tab-panel > table > tr > td {
+		width: 456px;
+	}
+}
+
+/* Slider viewer for textimonials */
+
+.slide-viewer {
+	display: block;
+	border: 5px double rgba(136, 0, 194, 0.4);
+	position: relative;
+	overflow: hidden;
+}
+
+/* Background image */
+
+.slide-viewer:before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.05;
+	background-image: url("../images/priceBack.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+
+/* Styling for testimonials slider */
+
+.slide-viewer {
+	position: relative;
+	overflow: hidden;
+	height: 150px;
+}
+
+.slide-group {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	display: none;
+	position: absolute;
+	z-index: 2;
+}
+
+/* Show first slide */
+
+.slide:first-child {
+	display: block;
+}
+
+/* Padding to center content of slides */
+
+.slide-1 {
+	padding: 35px 0;
+}
+
+/* style slide content */
+
+.comment {
+	font-size: 3rem;
+}
+
+.name {
+	font-size: 2.2rem;
+}
+
+/* Style slide buttons */
+
+.slide-buttons > button {
+	border: none;
+	background: none;
+	margin: 0 2px;
+	font-size: 1.6rem;
+	color: #710095;
+	cursor: pointer;
+}
+
+/* Slider media queries */
+
+@media (max-width:576px) {
+	.slider {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+}
+
+/* Gallery styling */
+
+.gallery {
+	margin: 1rem auto;
+	border: 5px double rgba(136, 0, 194, 0.4);
+	width: 1140px;
+	height: 600px;
+	overflow: scroll;
+	background-color: none;
+}
+
+/* image styling */
+
+.gal {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+	width: 100%;
+	padding: 5px;
+}
+
+/* Responsive Gallery media queries */
+
+@media (max-width:576px) {
+	.gallery {
+		max-width: 90%;
+		height: 300px;
+	}
+	
+	.main {
+		max-width: 90%;
+		height: 280px
+	}
+}
+
+@media (min-width:576px) {
+	.gallery {
+		max-width: 540px
+	}
+	
+	.main {
+		max-width: 530px
+	}
+}
+
+@media (min-width:770px) {
+	.gallery {
+		max-width: 720px
+	}
+	
+	.main {
+		max-width: 710px
+	}
+}
+
+@media (min-width:992px) {
+	.gallery {
+		max-width: 960px
+	}
+	
+	.main {
+		max-width: 950px
+	}
+}
+
+/* Footer styles and background */
+
+footer {
+	margin-top: 25px;
+	position: relative;
+	overflow: hidden;
+}
+
+/* make footer contents opaque */
+
+#copyright, #hours, #logo, #contact, #facebook-text, #facebook {
+	position: relative;
+	overflow: hidden;
+	z-index: 2;
+}
+
+/* Copyright text styling */
+
+#copyright {
+	font-size: 1.6rem;
+	padding: 10px;
+}
+
+/* Working hours styling */
+
+#hours {
+	font-size: 1.6rem;
+	padding: 20px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	table-layout: fixed;
+}
+
+/* Logo styling for footer */
+
+#logo {
+	width: 100%;
+	float: left;
+	padding-left: 20px;
+	padding-top: 10%;
+}
+
+@media (max-width:992px) {
+	#logo {
+		display: block;
+		margin: 0 auto;
+		width: 80%;
+		padding-left: 0;
+		float: none;
+	}
+}
+
+/* contacts styling */
+
+#contact {
+	font-size: 2rem;
+	padding-top: 15%;
+}
+
+@media (max-width:992px) {
+	#contact {
+		padding-top: 0;
+	}
+}
+
+/* Facebook styling */
+
+#facebook-text {
+	font-size: 2rem;
+}
+
+#facebook {
+	cursor: pointer;
+	color: #710095;
+}
+
+/* container and columns */
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto
+}
+
+@media (min-width:576px) {
+	.container {
+		max-width: 540px
+	}
+}
+
+@media (min-width:768px) {
+	.container {
+		max-width: 720px
+	}
+}
+
+@media (min-width:992px) {
+	.container {
+		max-width: 960px
+	}
+}
+
+@media (min-width:1200px) {
+	.container {
+		max-width: 1140px
+	}
+}
+
+.row {
+	overflow: auto;
+	width: 100%;
+}
+
+.column {
+	position: relative;
+	width: 20%;
+	float: left;
+}
+
+.column1, .column2, .column3, .column4, .column5, .column6,
+.column7, .column8, .column9, .column10, .column11, .column12 {
+	position: relative;
+	min-height: 1px;
+	width: 100%;
+	float: left;
+}
+
+.column1 {
+	max-width: 8.333333%
+}
+
+.column2 {
+	max-width: 16.666666%
+}
+.column3 {
+	max-width: 25%
+}
+
+.column4 {
+	max-width: 33.333333%
+}
+
+.column5 {
+	max-width: 41.666666%
+}
+
+.column6 {
+	max-width: 50%
+}
+
+.column7 {
+	max-width: 58.333333%
+}
+
+.column8 {
+	max-width: 66.666666%
+}
+
+.column9 {
+	max-width: 75%
+}
+
+.column10 {
+	max-width: 83.333333%
+}
+
+.column11 {
+	max-width: 91.666666%
+}
+
+.column12 {
+	max-width: 100%
+}
+
+@media (max-width: 992px) {
+	.content{
+		max-width: 100%;
+	}
+}

@@ -1,0 +1,786 @@
+$blue: #cbe3ff;
+$grey: #707070;
+$light-grey: #ccc;
+$black: #181818;
+$black-black: #111;
+$lightblue: #b8dbf4;
+$blue-white: #e6f2ff;
+$off-white: #f9ffff;
+$white: #fff;
+$menu-background:rgba(203, 227, 255, .9);
+$wmpc-background: rgba(254, 207, 1, .7);
+$wmpc-portfolio-background: rgba(254, 207, 1, 1);
+$amethyst-background: rgba(137, 0, 196, .7);
+$amethyst-portfolio-background: rgba(137, 0, 196, 1);
+$arts2life-background: rgba(252, 96, 0, .7);
+$arts2life-portfolio-background: rgba(252, 96, 0, 1);
+$head-height: 110px;
+$foot-height: 70px;
+$collapse: 1000px;
+$collapse-foot: 700px;
+$menu-transition: .5s;
+
+@mixin flex-align-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+@mixin flex-align-stretch {
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+@mixin flex-display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex-justify-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+@mixin flex-justify-space-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+@mixin flex-justify-space-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@mixin flex-dir-column {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@mixin flex-dir-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+@mixin flex-value($value) {
+  -webkit-box-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // set font size to 10px ready for easy coversions to rem
+}
+
+body { // font, font size, alignment, margin and colour
+  color: $grey;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  text-align: center;
+}
+
+a { // colour and transition
+  color: $grey;
+  -webkit-transition: color $menu-transition ease;
+  transition: color $menu-transition ease; // transition for colour change on hover
+}
+
+a:hover {
+  color: $black;
+}
+
+// ----HEADER----
+
+header { // flexbox, font size, height, position, z-index (s)
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  font-size: 3rem;
+  height: .7 * $head-height;
+  position: relative;
+  z-index: 1;
+
+  a { // text-decoration
+    text-decoration: none;
+  }
+
+  .head { // flexbox background colour, font size, height, width
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-dir-row;
+    @include flex-justify-space-between;
+    background-color: $blue;
+    // shadow below header
+    -webkit-box-shadow: 0 3px 15px $grey;
+    box-shadow: 0 3px 15px $grey;
+    font-size: 1.75rem;
+    font-weight: 800;
+    height: .7 * $head-height;
+    width: 100%;
+  }
+}
+
+@media (min-width:$collapse) { // header, head, h1
+  header { // colour, shadow, flexbox, height (s)
+    @include flex-dir-row;
+    @include flex-justify-space-between;
+    background-color: $blue;
+    // shadow below header
+    -webkit-box-shadow: 0 3px 15px $grey;
+    box-shadow: 0 3px 15px $grey;
+    height: $head-height;
+
+    .head { // remove shadow, alter width
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      width: 35%;
+    }
+  }
+}
+
+// ----NAVBAR----
+
+.nav-link { // padding (s)
+  padding: 15px 15px 10px;
+
+  svg { // rect, text (s)
+    rect { // style rectangle around contact me
+      fill: none;
+      stroke: $grey;
+      stroke-dasharray: 500,0;
+      stroke-dashoffset: 0;
+      stroke-width: 2;
+      -webkit-transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
+      transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
+		}
+
+    text { // style text in rectangle
+      fill: $grey;
+      -webkit-transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
+      transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
+		}
+	}
+
+  &:not(:last-child) { // aligns links vertically with each other
+    padding-bottom: 21px;
+  }
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active { // style the nav links on hover
+  color: $black;
+
+  svg { // contact me on hover
+    rect {
+      stroke: $black;
+      stroke-dasharray: 26,474;
+      stroke-dashoffset: 168;
+      stroke-width: 6;
+		}
+
+    text {
+      fill: $black;
+		}
+	}
+}
+
+.my-btn { // burger - background, border, margin
+  background: transparent; // remove button background
+  border: 0; // remove button border
+  margin: 0 30px 0 0;
+
+  #burger { // styling lines in hamburger, transitions
+    line {
+      stroke: $grey;
+      stroke-linecap: round;
+      stroke-width: 3px;
+		}
+
+    #one,
+		#two,
+		#three {
+      opacity: 1;
+      -webkit-transition: all $menu-transition ease-in-out;
+      transition: all $menu-transition ease-in-out; // transition to cross
+		}
+	}
+}
+
+.my-btn.active { // hamburger to cross when expanded
+  #burger {
+    #one { // transform top line to part of cross
+      -webkit-transform: translateX(24px) translateY(-6px) rotate(45deg);
+      transform: translateX(24px) translateY(-6px) rotate(45deg);
+		}
+
+    #two { // hide middle line
+      opacity: 0;
+		}
+
+    #three { // transform bottom line to part of cross
+      -webkit-transform: translatex(-19px) translateY(22px)rotate(-45deg);
+      transform: translatex(-19px) translateY(22px)rotate(-45deg);
+		}
+	}
+}
+
+.my-btn:hover,
+.my-btn:focus,
+.my-btn:active { // turn hamburger black and bold on hover
+  #burger {
+    line {
+      stroke: $black;
+      stroke-width: 4px;
+      -webkit-transition: stroke $menu-transition ease, stroke-width $menu-transition ease;
+      transition: stroke $menu-transition ease, stroke-width $menu-transition ease;
+		}
+	}
+}
+
+.closed { // hide menu by default
+  display: none;
+}
+
+.show { // show menu when button is clicked - flexbox, width, positioning
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  background-color: $menu-background;
+  width: 100%;
+  position: absolute;
+  top: .7 * $head-height;
+  left: 0;
+}
+
+@media (min-width:$collapse) { // hide button, show menu
+  .my-btn { // hide button
+    display: none;
+  }
+
+  .closed { // show menu - flexbox
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-dir-row;
+  }
+}
+
+// ----HEADINGS----
+
+.title { // flexbox, background, colour, height, padding, text shadow, width
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  @include flex-justify-center;
+  background: url('../images/wireframe.jpg') no-repeat center center; // page background
+  background-size: cover;
+  color: $lightblue;
+  min-height: 250px;
+  padding: 0 10px;
+  text-shadow: 2px 2px 7px $black-black;
+  width: 100%;
+}
+
+h1 { // font size
+  font-size: 2.5rem;
+}
+
+@media (min-width:600px) { // min-height (title), font size
+  .title {
+    min-height: 600px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width:740px) { // font size
+  h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media (min-width:1000px) { // font size
+  h1 {
+    font-size: 7rem;
+  }
+}
+
+// ----HOMEPAGE----
+
+.homepage { // flexbox, position, z-index (s)
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  position: relative;
+  z-index: 0;
+
+  h1 { // font size, margin
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
+
+  h2 { // font size, margin
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .process { // flexbox, backgrouns, padding, width (s)
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-dir-column;
+    @include flex-justify-center;
+    background-color: $blue-white;
+    padding: 10px 20px;
+    width: 100%;
+
+    h3 { // font size, margin
+      font-size: 4rem;
+      margin: 10px 0;
+    }
+
+    p { // font size
+      font-size: 2.5rem;
+    }
+  }
+}
+
+// font size adjustments for larger screens
+
+@media (min-width:600px) {
+  .homepage {
+    h1 {
+      font-size: 5rem;
+		}
+
+    h2 {
+      font-size: 3rem;
+		}
+	}
+}
+
+@media (min-width:740px) {
+  .homepage {
+    h1 {
+      font-size: 6.5rem;
+		}
+
+    h2 {
+      font-size: 4rem;
+		}
+	}
+}
+
+@media (min-width:1000px) {
+  .homepage {
+    h1 {
+      font-size: 9rem;
+		}
+
+    h2 {
+      font-size: 6.5rem;
+		}
+	}
+}
+
+// ----ABOUT----
+
+.about { // flexbox (s)
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  @include flex-justify-center;
+
+  .about-text {
+    font-size: 2rem;
+
+    p {
+      padding: 0 10px;
+    }
+  }
+
+  ul {
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-dir-column;
+    @include flex-justify-center;
+    padding: 10px;
+
+    li {
+      @include flex-align-center;
+      @include flex-display;
+      @include flex-dir-column;
+      @include flex-justify-center;
+      list-style-type: none;
+      -webkit-box-shadow: 0 0 5px $black-black;
+      box-shadow: 0 0 5px $black-black;
+      border-radius: 10px;
+      margin: 10px;
+      min-height: 150px;
+      background-color: $blue-white;
+      width: 100%;
+      padding: 0 5px;
+    }
+  }
+}
+
+@media (min-width:740px) { // changes on larger screens
+  .about {
+    .about-text {
+      font-size: 2.5rem;
+    }
+
+    ul {
+      @include flex-dir-row;
+      @include flex-justify-space-around;
+
+      li {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        width: auto;
+        min-height: 220px;
+      }
+    }
+  }
+}
+
+// ----PORTFOlIO----
+
+.portfolio { // background colour
+  background-color: $blue;
+}
+
+.portfolio-cards { // flexbox, padding
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  @include flex-justify-space-around;
+  padding: 20px;
+}
+
+.portfolio-img { // flex order, margin, position (s)
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin: 10px;
+  position: relative;
+
+  .site-img { // flexbox (s)
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-justify-center;
+
+    img { // border-radius, position, width
+      border-radius: 5px;
+      position: relative;
+      width: 100%;
+    }
+
+    .wmpc { // background
+      background: $wmpc-background;
+    }
+
+    .amethyst { // background
+      background: $amethyst-background;
+    }
+  }
+
+  .site-img:hover { // fade in text on hover
+    .hvr-txt {
+      opacity: 1;
+      -webkit-transition: opacity $menu-transition ease-in-out;
+      transition: opacity $menu-transition ease-in-out;
+    }
+  }
+}
+
+.hvr-txt { // flex-box, border-radius, colour, cursor, font size, weight, height, position, opacity, text shadow, transitions, width (s)
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  @include flex-justify-center;
+  border-radius: 5px;
+  color: $white;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+  padding: 5px;
+  position: absolute;
+  text-shadow: 1px 1px 5px $black-black;
+  top: 0;
+  -webkit-transition: opacity $menu-transition ease-in-out;
+  transition: opacity $menu-transition ease-in-out;
+
+  h2 {
+    margin: 15px 0;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width:$collapse-foot) {
+  .hvr-txt {
+    font-size: 3rem;
+
+    p {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (min-width:$collapse) { // cards in a row
+  .portfolio-cards {
+    @include flex-dir-row;
+  }
+}
+
+// ----PORTFOlIO DETAIL PAGES----
+
+.portfolio-about { // flexbox, background colour, font-size
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  background-color: $blue-white;
+  font-size: 1.6rem;
+}
+
+.portfolio-text { // flexbox, padding
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  padding: 15px;
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+}
+
+.portfolio-visit { // flexbox, margin, cursor, position (s)
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  margin: 30px;
+  cursor: pointer;
+  position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+  .site-img { // flexbox (s)
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-justify-center;
+
+    img { // position, backface-visibility, width, opacity, transform, transition
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      opacity: 1;
+      position: relative;
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+      -webkit-transition: -webkit-transform $menu-transition ease-in-out,
+                          transform $menu-transition ease-in-out,
+                          opacity $menu-transition ease-in-out;
+      transition: -webkit-transform $menu-transition ease-in-out,
+                  transform $menu-transition ease-in-out,
+                  opacity $menu-transition ease-in-out;
+      width: 100%;
+    }
+
+    .wmpc { // background, border-radius
+      background: $wmpc-portfolio-background;
+      border-radius: 50%;
+    }
+
+    .amethyst { // background, border-radius
+      background: $amethyst-portfolio-background;
+      border-radius: 10px;
+    }
+
+    .arts2life { // background, border-radius
+      background: $arts2life-portfolio-background;
+      border-radius: 10px;
+    }
+  }
+
+  .site-img:hover { // spin and fade in text on hover
+    img { // opacity, transform
+      opacity: 0;
+      -webkit-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+    }
+
+    .hvr-spin { // opacity, transform
+      opacity: 1;
+      -webkit-transform: rotateY(0deg);
+      transform: rotateY(0deg);
+    }
+  }
+
+  .hvr-spin { // flexbox, border-radius, colour, cursor, height, position, backface-vilibility, transform, opacity, transitions, width (s)
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-justify-center;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    opacity: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    position: absolute;
+    -webkit-transition: -webkit-transform $menu-transition ease-in-out,
+                        transform $menu-transition ease-in-out,
+                        opacity $menu-transition ease-in-out;
+    transition: -webkit-transform $menu-transition ease-in-out,
+                transform $menu-transition ease-in-out,
+                opacity $menu-transition ease-in-out;
+    width: 100%;
+
+    h3 { // colour, font size and weight, text-shadow
+      color: $white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 10px $black-black;
+    }
+  }
+}
+
+@media (min-width:600px) { // para font size
+  .portfolio-about {
+    font-size: 2rem;
+	}
+}
+
+@media (min-width:$collapse) {
+  .portfolio-about {
+    @include flex-dir-row;
+  }
+}
+
+// ----CONTACT----
+
+.contact-me {
+  background-color: $blue-white;
+}
+
+.contact-info {
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+}
+
+.text {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 2rem;
+  padding: 0 20px;
+}
+
+form {
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  font-size: 2.4rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px 0;
+
+  label {
+    margin: 5px;
+
+    input {
+      color: $grey;
+      font-family: 'Raleway', sans-serif;
+      font-size: 2rem;
+    }
+
+    textarea {
+      border: 1px solid $light-grey;
+      color: $grey;
+      font-family: 'Raleway', sans-serif;
+      font-size: 2rem;
+    }
+  }
+
+  &:first-child {
+    margin-top: 2.5px;
+  }
+
+  .message {
+    @include flex-align-center;
+    @include flex-display;
+    @include flex-dir-column;
+    margin-top: 2.5px;
+  }
+}
+
+@media (min-width:$collapse) {
+  .contact-info {
+    @include flex-dir-row
+  }
+}
+
+// ----FOOTER----
+
+footer { // flexbox and background colour (s)
+  @include flex-align-center;
+  @include flex-display;
+  @include flex-dir-column;
+  background-color: $blue;
+  padding-bottom: 10px;
+
+  img { // font size & margin
+    margin: 10px;
+  }
+
+  .contact { // flexbox (s)
+    @include flex-display;
+    @include flex-dir-column;
+
+    a { // padding and remove underline
+      padding: 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: $collapse-foot) { // layout for larger screens
+  footer { // change to row
+    @include flex-dir-row;
+    height: 70px;
+    padding: 0;
+
+    img { // increase left margin
+      margin-left: 30px;
+    }
+
+    .contact { // change to row & alter margins to auto, 30px
+      @include flex-dir-row;
+      margin-left: auto;
+      margin-right: 30px;
+    }
+  }
+}

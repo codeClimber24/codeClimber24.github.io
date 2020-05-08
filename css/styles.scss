@@ -519,7 +519,7 @@ h1 { // font size
   @include flex-dir-column;
   @include flex-justify-center;
   border-radius: 5px;
-  color: $black;
+  color: $white;
   cursor: pointer;
   font-size: 2rem;
   font-weight: bold;
@@ -533,6 +533,11 @@ h1 { // font size
   top: 0;
   -webkit-transition: opacity $menu-transition ease-in-out;
   transition: opacity $menu-transition ease-in-out;
+
+  &.wmpc {
+    color: $black;
+    text-shadow: none;
+  }
 
   h2 {
     margin: 15px 0;

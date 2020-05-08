@@ -473,11 +473,19 @@ h1 { // font size
   padding: 20px;
 
   &.one {
-    padding-bottom: 10px
+    padding-bottom: 10px;
+
+    .portfolio-img {
+      margin-bottom: 5px;
+    }
   }
 
   &.two {
-    padding-top: 10px
+    padding-top: 10px;
+
+    .portfolio-img {
+      margin-top: 5px;
+    }
   }
 }
 

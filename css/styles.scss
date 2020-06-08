@@ -177,6 +177,10 @@ header { // flexbox, font size, height, position, z-index (s)
   }
 }
 
+.active {
+  font-weight: bold;
+}
+
 .nav-link:hover,
 .nav-link:focus,
 .nav-link:active { // style the nav links on hover

@@ -11,6 +11,7 @@ function fadeIn () {
     op += 0.1
   }, 50)
   btn.setAttribute('aria-expanded', 'true')
+  btn.setAttribute('aria-label', 'Close navigation menu');
 }
 
 function fadeOut () {
@@ -24,6 +25,7 @@ function fadeOut () {
     op -= 0.1
   }, 50)
   btn.setAttribute('aria-expanded', 'false')
+  btn.setAttribute('aria-label', 'Open navigation menu');
   setTimeout(function () {
     topNav.setAttribute('class', 'closed')
   }, 510)

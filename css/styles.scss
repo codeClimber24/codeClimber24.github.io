@@ -640,12 +640,12 @@ h1 { // font size
                 opacity $menu-transition ease-in-out;
     width: 100%;
 
-    // h3 { // colour, font size and weight, text-shadow
-    //   color: $white;
-    //   font-size: 3rem;
-    //   font-weight: bold;
-    //   text-shadow: 1px 1px 10px $black-black;
-    // }
+    h3 { // colour, font size and weight, text-shadow
+      color: $white;
+      font-size: 3rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 10px $black-black;
+    }
   }
 }
 

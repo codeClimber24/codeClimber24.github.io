@@ -522,6 +522,11 @@ h1 { // font size
     text-shadow: none;
   }
 
+  &.bev {
+    color: $black;
+    text-shadow: none;
+  }
+
   h2 {
     margin: 15px 0;
     text-transform: uppercase;

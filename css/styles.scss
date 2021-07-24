@@ -9,7 +9,7 @@ $off-white: #f9ffff;
 $white: #fff;
 $menu-background:rgba(203, 227, 255, .9);
 $wmpc-background: rgba(254, 207, 1, 1);
-$amethyst-background: rgba(137, 0, 196, 1);
+$bkcp-background: rgba(196, 228, 225, 1);
 $paul-background: rgba(148, 22, 81, 1);
 $head-height: 110px;
 $foot-height: 70px;
@@ -18,62 +18,42 @@ $collapse-foot: 700px;
 $menu-transition: .5s;
 
 @mixin flex-align-center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 
 @mixin flex-align-stretch {
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
 }
 
 @mixin flex-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 @mixin flex-justify-center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 
 @mixin flex-justify-space-around {
-  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
 @mixin flex-justify-space-between {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
 @mixin flex-dir-column {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
 
 @mixin flex-dir-row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 @mixin flex-value($value) {
-  -webkit-box-flex: $value;
-  -ms-flex: $value;
   flex: $value;
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -91,7 +71,6 @@ body { // font, font size, alignment, margin and colour
 
 a { // colour and transition
   color: $grey;
-  -webkit-transition: color $menu-transition ease;
   transition: color $menu-transition ease; // transition for colour change on hover
 }
 
@@ -122,7 +101,6 @@ header { // flexbox, font size, height, position, z-index (s)
     @include flex-justify-space-between;
     background-color: $blue;
     // shadow below header
-    -webkit-box-shadow: 0 3px 15px $grey;
     box-shadow: 0 3px 15px $grey;
     font-size: 1.75rem;
     font-weight: 800;
@@ -137,12 +115,10 @@ header { // flexbox, font size, height, position, z-index (s)
     @include flex-justify-space-between;
     background-color: $blue;
     // shadow below header
-    -webkit-box-shadow: 0 3px 15px $grey;
     box-shadow: 0 3px 15px $grey;
     height: $head-height;
 
     .head { // remove shadow, alter width
-      -webkit-box-shadow: none;
       box-shadow: none;
       width: 35%;
     }
@@ -161,13 +137,11 @@ header { // flexbox, font size, height, position, z-index (s)
       stroke-dasharray: 500,0;
       stroke-dashoffset: 0;
       stroke-width: 2;
-      -webkit-transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
       transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
 		}
 
     text { // style text in rectangle
       fill: $grey;
-      -webkit-transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
       transition: all 1.35s cubic-bezier(.5, 1, .22, 1);
 		}
 	}
@@ -216,7 +190,6 @@ header { // flexbox, font size, height, position, z-index (s)
 		#two,
 		#three {
       opacity: 1;
-      -webkit-transition: all $menu-transition ease-in-out;
       transition: all $menu-transition ease-in-out; // transition to cross
 		}
 	}
@@ -225,7 +198,6 @@ header { // flexbox, font size, height, position, z-index (s)
 .my-btn.active { // hamburger to cross when expanded
   #burger {
     #one { // transform top line to part of cross
-      -webkit-transform: translateX(24px) translateY(-6px) rotate(45deg);
       transform: translateX(24px) translateY(-6px) rotate(45deg);
 		}
 
@@ -234,7 +206,6 @@ header { // flexbox, font size, height, position, z-index (s)
 		}
 
     #three { // transform bottom line to part of cross
-      -webkit-transform: translatex(-19px) translateY(22px)rotate(-45deg);
       transform: translatex(-19px) translateY(22px)rotate(-45deg);
 		}
 	}
@@ -247,7 +218,6 @@ header { // flexbox, font size, height, position, z-index (s)
     line {
       stroke: $black;
       stroke-width: 4px;
-      -webkit-transition: stroke $menu-transition ease, stroke-width $menu-transition ease;
       transition: stroke $menu-transition ease, stroke-width $menu-transition ease;
 		}
 	}
@@ -430,7 +400,6 @@ h1 { // font size
       @include flex-dir-column;
       @include flex-justify-center;
       list-style-type: none;
-      -webkit-box-shadow: 0 0 5px $black-black;
       box-shadow: 0 0 5px $black-black;
       border-radius: 10px;
       margin: 10px;
@@ -453,8 +422,6 @@ h1 { // font size
       @include flex-justify-space-around;
 
       li {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
         flex: 1;
         width: auto;
         min-height: 220px;
@@ -494,8 +461,6 @@ h1 { // font size
 }
 
 .portfolio-img { // flex order, margin, position (s)
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   margin: 15px;
   position: relative;
@@ -515,8 +480,8 @@ h1 { // font size
       background: $wmpc-background;
     }
 
-    .amethyst { // background
-      background: $amethyst-background;
+    .bev { // background
+      background: $bkcp-background;
     }
 
     .paul { // background
@@ -527,7 +492,6 @@ h1 { // font size
   .site-img:hover { // fade in text on hover
     .hvr-txt {
       opacity: 1;
-      -webkit-transition: opacity $menu-transition ease-in-out;
       transition: opacity $menu-transition ease-in-out;
     }
   }
@@ -551,7 +515,6 @@ h1 { // font size
   position: absolute;
   text-shadow: 1px 1px 5px $black-black;
   top: 0;
-  -webkit-transition: opacity $menu-transition ease-in-out;
   transition: opacity $menu-transition ease-in-out;
 
   &.wmpc {
@@ -600,8 +563,6 @@ h1 { // font size
   @include flex-display;
   @include flex-dir-column;
   padding: 15px;
-  -webkit-box-flex: 3;
-  -ms-flex: 3;
   flex: 3;
 }
 
@@ -612,8 +573,6 @@ h1 { // font size
   margin: 30px;
   cursor: pointer;
   position: relative;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 
   .site-img { // flexbox (s)
@@ -626,13 +585,8 @@ h1 { // font size
       backface-visibility: hidden;
       opacity: 1;
       position: relative;
-      -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
-      -webkit-transition: -webkit-transform $menu-transition ease-in-out,
-                          transform $menu-transition ease-in-out,
-                          opacity $menu-transition ease-in-out;
-      transition: -webkit-transform $menu-transition ease-in-out,
-                  transform $menu-transition ease-in-out,
+      transition: transform $menu-transition ease-in-out,
                   opacity $menu-transition ease-in-out;
       width: 100%;
     }
@@ -642,8 +596,8 @@ h1 { // font size
       border-radius: 50%;
     }
 
-    .amethyst { // background, border-radius
-      background: $amethyst-background;
+    .bev { // background, border-radius
+      background: $bkcp-background;
       border-radius: 10px;
     }
 
@@ -658,13 +612,11 @@ h1 { // font size
 
     img { // opacity, transform
       opacity: 0;
-      -webkit-transform: rotateY(180deg);
       transform: rotateY(180deg);
     }
 
     .hvr-spin { // opacity, transform
       opacity: 1;
-      -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg);
     }
   }
@@ -677,23 +629,18 @@ h1 { // font size
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     opacity: 0;
-    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     position: absolute;
-    -webkit-transition: -webkit-transform $menu-transition ease-in-out,
-                        transform $menu-transition ease-in-out,
-                        opacity $menu-transition ease-in-out;
-    transition: -webkit-transform $menu-transition ease-in-out,
-                transform $menu-transition ease-in-out,
+    transition: transform $menu-transition ease-in-out,
                 opacity $menu-transition ease-in-out;
     width: 100%;
 
-    h3 { // colour, font size and weight, text-shadow
-      color: $white;
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 1px 1px 10px $black-black;
-    }
+    // h3 { // colour, font size and weight, text-shadow
+    //   color: $white;
+    //   font-size: 3rem;
+    //   font-weight: bold;
+    //   text-shadow: 1px 1px 10px $black-black;
+    // }
   }
 }
 
@@ -722,8 +669,6 @@ h1 { // font size
 }
 
 .text {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   font-size: 2rem;
   padding: 0 20px;
@@ -734,8 +679,6 @@ form {
   @include flex-display;
   @include flex-dir-column;
   font-size: 2.4rem;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   padding: 10px 0;
 
